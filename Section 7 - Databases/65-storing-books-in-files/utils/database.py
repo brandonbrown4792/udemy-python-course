@@ -8,6 +8,11 @@ name,author,read\n
 books_file = 'books.txt'
 
 
+def create_book_table():
+    with open(books_file, 'w'):
+        pass  # Just to make sure file is present on initial reads
+
+
 def add_book(name, author):
     with open(books_file, 'a') as file:
         file.write(f'{name},{author},0\n')
