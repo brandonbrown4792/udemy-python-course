@@ -12,3 +12,7 @@ g = hundred_numbers()
 print(next(g))
 print(next(g))
 print(next(g))
+
+# This can turn a generator into a list
+# This includes all items in generator
+print(list(g))
