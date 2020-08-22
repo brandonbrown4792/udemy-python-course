@@ -1,0 +1,8 @@
+2020-08-22 01:20:52,340 INFO     [88-logging-to-a-file.py:11 This will not show up
+2020-08-22 01:20:52,340 WARNING  [88-logging-to-a-file.py:12 This will.
+2020-08-22 01:20:52,340 DEBUG    [88-logging-to-a-file.py:13 This is a debug message
+2020-08-22 01:20:52,340 CRITICAL [88-logging-to-a-file.py:14 A critical error occured
+2020-08-22 01:20:56,927 INFO     [88-logging-to-a-file.py:11 This will not show up
+2020-08-22 01:20:56,927 WARNING  [88-logging-to-a-file.py:12 This will.
+2020-08-22 01:20:56,928 DEBUG    [88-logging-to-a-file.py:13 This is a debug message
+2020-08-22 01:20:56,928 CRITICAL [88-logging-to-a-file.py:14 A critical error occured
