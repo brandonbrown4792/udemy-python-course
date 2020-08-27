@@ -40,25 +40,25 @@ class ParsedItem:
     def __init__(self, page):
         self.soup = BeautifulSoup(page, 'html.parser')
 
-    def find_item_name(self):
+    def name(self):
         locator = 'article.product_pod h3 a'  # a inside h3 inside article with class of product_pod
         item_link = self.soup.select_one(locator)
         item_name = item_link.attrs['title']
         return item_name
 
-    def find_item_link(self):
+    def link(self):
         locator = 'article.product_pod h3 a'
         item_link = self.soup.select_one(locator).attrs['href']
         return item_link
 
-    def find_item_price(self):
+    def price(self):
         locator = 'article.product_pod p.price_color'
         item_price = self.soup.select_one(locator).string
         pattern = '£([0-9]+\.[0-9]+)'
         matcher = re.search(pattern, item_price)
         return float(matcher.group(1))
 
-    def find_item_rating(self):
+    def rating(self):
         locator = 'article.product_pod p.star-rating'
         item_rating_tag = self.soup.select_one(locator)
         classes = item_rating_tag.attrs['class']  # ['star-rating', 'Three']
@@ -69,7 +69,7 @@ class ParsedItem:
 
 
 item = ParsedItem(ITEM_HTML)
-print(item.find_item_name())
-print(item.find_item_link())
-print(item.find_item_price())
-print(item.find_item_rating())
+print(item.name())
+print(item.link())
+print(item.price())
+print(item.rating())
