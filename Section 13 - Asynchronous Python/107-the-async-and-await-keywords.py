@@ -14,11 +14,17 @@ def friend_upper():
 
 # This tells python that we can await coroutings - this is the same as yield from g (passing values to other generators)
 async def greet(g):
+    print('Starting...')
     await g
+    print('Ending...')
 
 
 greeter = greet(friend_upper())
 greeter.send(None)  # Prime the generator
 greeter.send('Hello')
-print('Hello, world! Multi-tasking...')
-greeter.send('How are you, ')
+
+greeting = input('Enter a greeting: ')
+greeter.send(greeting)
+
+greeting = input('Enter a greeting: ')
+greeter.send(greeting)
