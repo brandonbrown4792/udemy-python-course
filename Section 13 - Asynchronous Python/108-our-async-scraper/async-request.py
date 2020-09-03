@@ -1,0 +1,19 @@
+import aiohttp
+import asyncio
+import time
+
+
+async def fetch_page(url):
+    # Client sessions are a connection pool (allows us to use multiple connections at the same time)
+    async with aiohttp.ClientSession() as session:
+        page_start = time.time()
+        async with session.get(url) as response:
+            print(f'Page took {time.time() - page_start}')
+            return response.status
+
+
+loop = asyncio.get_event_loop()
+tasks = [fetch_page('http://brandonmichaelbrown.com') for i in range(50)]
+start = time.time()
+loop.run_until_complete(asyncio.gather(*tasks))
+print(f'All took {time.time() - start}')
