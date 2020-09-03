@@ -13,7 +13,8 @@ async def fetch_page(url):
 
 
 loop = asyncio.get_event_loop()
-tasks = [fetch_page('http://brandonmichaelbrown.com') for i in range(50)]
+
+tasks = [fetch_page('http://google.com') for i in range(50)]
 start = time.time()
 loop.run_until_complete(asyncio.gather(*tasks))
 print(f'All took {time.time() - start}')
