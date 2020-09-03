@@ -17,6 +17,11 @@ def greet(g):
         g.send(greeting)
 
 
+# # Alternatively, you can write the greet function as the following (no one likes to do this because it's confusing)
+# def greet(g):
+#     yield from g
+
+
 greeter = greet(friend_upper())
 greeter.send(None)  # Prime the greet generator
 greeter.send('Hello')
