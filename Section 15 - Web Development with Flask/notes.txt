@@ -1,0 +1,4 @@
+Use pipenv --venv to see virtual environment path
+Enter virtual environment by copying this path and using the source [path]/bin/activate command
+
+To get out of the pipenv, use deactivate
