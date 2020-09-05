@@ -11,3 +11,7 @@ pip freeze gives you all packages / libraries currently installed
 pip freeze > requirements.txt saves the library names and versions in a file called requirements.txt
 
 install all requirements automatically with pip install -r requirements.txt (great for sharing)
+
+use "deactivate" to come out of the virtual environment
+
+remove virtual environment by using rm -rf venv
