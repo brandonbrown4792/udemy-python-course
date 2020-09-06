@@ -1,5 +1,5 @@
 import time
-from openexchange import OpenExchangeClient
+from libs.openexchange import OpenExchangeClient
 
 APP_ID = '8e3721a8892a499389a3578a053a6e7a'
 
