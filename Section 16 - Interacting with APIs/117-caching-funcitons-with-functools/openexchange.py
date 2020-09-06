@@ -1,4 +1,4 @@
-import functools
+from pip._internal.cache import cached, TTLCache
 import requests
 
 
