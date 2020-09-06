@@ -7,11 +7,12 @@ class OpenExchangeClient:
     def __init__(self, app_id):
         self.app_id = app_id
 
+    @property
     def latest(self):
         return requests.get(f'{self.BASE_URL}/latest.json?app_id={self.app_id}').json()
 
     def convert(self, from_amount, from_currency, to_currency):
-        rates = self.latest()['rates']
+        rates = self.latest['rates']
         to_rate = rates[to_currency]
 
         if from_currency == 'USD':

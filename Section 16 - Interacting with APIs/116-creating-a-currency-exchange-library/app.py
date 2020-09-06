@@ -7,4 +7,4 @@ client = OpenExchangeClient(APP_ID)
 usd_amount = 1000
 gbp_amount = OpenExchangeClient.convert(client, usd_amount, 'USD', 'GBP')
 
-print(f'USD: {usd_amount}, GBP: {gbp_amount}')
+print(f'USD: {usd_amount}, GBP: {gbp_amount:.2f}')
