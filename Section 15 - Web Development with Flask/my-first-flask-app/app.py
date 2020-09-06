@@ -13,7 +13,7 @@ posts = {
 
 @app.route('/')
 def home():
-    return 'Hello, world!'
+    return render_template('home.html', posts=posts)
 
 
 # post_id is going to be replaced by a number specified by the browser request
