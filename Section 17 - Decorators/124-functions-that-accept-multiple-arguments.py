@@ -1,6 +1,7 @@
 def add_all(a1, a2, a3, a4):
     return a1 + a2 + a3 + a4
 
+
 vals = (1, 3, 5, 7)
 
 # Argument unpacking
@@ -13,12 +14,15 @@ print(add_all(**vals))
 
 
 # Can accept any number of arguments by using the asterisk
+# *args is a tuple
 def add_all(*args):
     return sum(args)
+
 
 print(add_all(5, 7, 3, 4))
 
 
+# **kwargs is a dictionary
 def pretty_print(**kwargs):
     for k, v in kwargs.items():
         print(f'For {k} we have {v}.')
