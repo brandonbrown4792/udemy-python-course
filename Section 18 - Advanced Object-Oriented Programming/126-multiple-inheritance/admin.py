@@ -1,7 +1,8 @@
 from user import User
+from saveable import Saveable
 
 
-class Admin(User):
+class Admin(User, Saveable):
     def __init__(self, username, password, access):
         super(Admin, self).__init__(username, password)
         self.access = access
