@@ -16,3 +16,11 @@ class Admin(User, Saveable):
             'password': self.password,
             'access': self.access
         }
+
+    # self.save() will be searched in Admin
+    # then in User
+    # then in Saveable, where it will e found
+
+    # self.save() uses self.to_dict
+
+    # self.to_dict() will be searched for in Admin, where it will be found

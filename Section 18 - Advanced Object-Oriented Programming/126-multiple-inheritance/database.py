@@ -3,7 +3,7 @@ class Database:
 
     @classmethod
     def insert(cls, data):
-        cls.content['users'].append(data)
+        Database.content['users'].append(data)
 
     @classmethod
     def remove(cls, finder):
