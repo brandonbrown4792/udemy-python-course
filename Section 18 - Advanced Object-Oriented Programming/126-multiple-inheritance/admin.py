@@ -10,6 +10,7 @@ class Admin(User, Saveable):
     def __repr__(self):
         return f'<Admin {self.username}, access {self.access}>'
 
+    # This will override the user to_dict if it is called
     def to_dict(self):
         return {
             'username': self.username,

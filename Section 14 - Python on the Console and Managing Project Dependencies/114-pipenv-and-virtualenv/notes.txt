@@ -1,5 +1,0 @@
-To run python interpreter inside pip environment use pipenv run python
-
-To run any python file, use pipenv run python [pythonfile].py
-This will run the virtual environment for this project. Pipenv will manage all the virtual environment files
-However, moving your project folder will require you to run pipenv install again before it will work
